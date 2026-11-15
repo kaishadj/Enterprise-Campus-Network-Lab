@@ -1,6 +1,6 @@
 # Device configurations
 
-These are IOS configuration snapshots exported before the final ACL checks and the latest `.pkt` save. Local credential lines are replaced with comments. To rebuild SSH locally, create a lab-only `netadmin` account and generate RSA keys on each access switch, then verify the VTY settings.
+These are IOS configuration snapshots. The DSW1 and DSW2 files include the SVI ACL commands entered during the live filtering tests, which the raw exports omitted. Local credential lines were removed. To rebuild SSH locally, create a lab-only `netadmin` account and generate RSA keys on each access switch, then verify the VTY settings.
 
 | Layer | Configuration exports |
 | --- | --- |

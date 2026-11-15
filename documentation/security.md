@@ -2,7 +2,7 @@
 
 ## Inter-VLAN and guest filtering
 
-| Access list | Intended attachment | Policy |
+| Access list | SVI binding | Policy |
 | --- | --- | --- |
 | `ACCOUNTING-IN` | Inbound on `Vlan20` on both distribution switches | Deny Accounting to Sales and permit other IPv4 traffic. |
 | `SALES-IN` | Inbound on `Vlan30` on both distribution switches | Deny Sales to Accounting and permit other IPv4 traffic. |
@@ -10,7 +10,9 @@
 
 Both distribution switches have the ACL definitions. The guest filter includes HSRPv1 UDP/1985 to `224.0.0.2` so the two switches can agree on which one owns the guest gateway. The DHCP exceptions cover the initial broadcast and a renewal addressed to `192.168.40.10`.
 
-The isolation test verified that DSW2 preserved access to WEB-EXT and blocked an ICMP request to IT-1. The earlier running-config snapshots show the named ACLs and omit the `ip access-group` commands under the SVIs. After reopening the `.pkt`, check the policy with the [traffic tests](../verification/README.md#filtering-after-reopening). The ICMP and deny counters can confirm which rules handled the test packets. [Recorded guest pings](../screenshots/guest-1-filtering-dsw1-isolated.png) · [ACL counters](../screenshots/dsw2-guest-acl-counters.png)
+The isolation test verified that DSW2 preserved access to WEB-EXT and blocked an ICMP request to IT-1. The [DSW1](../configs/DSW1.cfg) and [DSW2](../configs/DSW2.cfg) configuration files include the SVI bindings used during the live tests. [Recorded guest pings](../screenshots/guest-1-filtering-dsw1-isolated.png) · [ACL counters](../screenshots/dsw2-guest-acl-counters.png)
+
+ACL persistence in the published `.pkt` is unverified. After reopening the file, run the [traffic tests](../verification/README.md#filtering-after-reopening) before applying any commands. The ICMP and deny counters can confirm which rules handled the test packets. A similar loss of SVI ACL bindings after reopening has been reported on simulated 3560 switches. [Cisco Community report](https://community.cisco.com/t5/switching/packet-tracer-acls-remain-in-config-but-stop-working-after/td-p/5378161)
 
 If filtering stops after a reload, reapply the existing lists on **both DSW1 and DSW2**.
 
