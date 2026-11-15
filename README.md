@@ -4,11 +4,11 @@ I designed and built an enterprise campus network in Cisco Packet Tracer for Atl
 
 ## Topology
 
+![Cisco Packet Tracer workspace showing the campus topology, department VLANs, guest PC, and simulated external server](topology/packet-tracer-topology.png)
+
 ![Logical topology showing the three access switches, two distribution switches, edge router, simulated ISP, and servers](topology/logical-topology.svg)
 
-Each access switch has a trunk to each distribution switch. DSW1 normally serves as both the STP root and the active HSRP gateway. DSW2 can take over the virtual gateways and reach the edge router on its own routed link. The final inter-switch bundle is `Po2` on `Fa0/21–22`.
-
-The [Packet Tracer workspace capture](topology/packet-tracer-topology.png) shows the actual devices and links. The logical diagram above uses the corrected labels `Po2` and `192.168.20.0/24` for Accounting.
+Each access switch has a trunk to each distribution switch. DSW1 normally serves as both the STP root and the active HSRP gateway. DSW2 can take over the virtual gateways and reach the edge router on its own routed link. The final inter-switch bundle is `Po2` on `Fa0/21–22`. The `Po1` annotation in the Packet Tracer capture predates that change.
 
 ## Test results
 
