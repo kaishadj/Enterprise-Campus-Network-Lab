@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="1160" viewBox="0 0 1600 1160" role="img" xml:lang="en" aria-labelledby="title description">
+<title id="title">Enterprise Campus Network logical topology</title>
+<desc id="description">Three departments, a guest VLAN on ASW-SALES, two multilayer switches connected by LACP, an internal server and simulated Internet access. DSW1 is the STP root and active HSRP gateway. DSW2 is the standby. Each distribution switch has a routed link to EDGE-R1.</desc>
+<defs>
+<style>
+text { font-family: "Avenir Next", Arial, sans-serif; }
+.eyebrow { font-size: 16px; font-weight: 700; letter-spacing: 2.2px; fill: #31516E; }
+.headline { font-size: 48px; font-weight: 750; letter-spacing: -1.3px; fill: #142A41; }
+.subtitle { font-size: 20px; font-weight: 500; fill: #4A6177; }
+.layer { font-size: 15px; font-weight: 700; letter-spacing: 1.7px; fill: #4D657D; }
+.device { font-size: 19px; font-weight: 750; fill: #172F47; }
+.detail { font-size: 16px; font-weight: 500; fill: #49617A; }
+.zone { font-size: 21px; font-weight: 750; }
+.pc { font-size: 15px; font-weight: 750; fill: #172F47; }
+.minor { font-size: 14px; font-weight: 550; fill: #4F657B; }
+.pill { font-size: 14px; font-weight: 700; }
+.port { font-size: 12px; font-weight: 650; fill: #476379;  }
+.linklabel { font-size: 15px; font-weight: 700; fill: #285A86; }
+.legend { font-size: 16px; font-weight: 600; fill: #314C65; }
+</style>
+<symbol id="router" viewBox="0 0 36 36"><g stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="13"/><path d="M 10 18 H 26 M 23 15 L 26 18 L 23 21 M 13 15 L 10 18 L 13 21 M 18 10 V 26 M 15 13 L 18 10 L 21 13 M 15 23 L 18 26 L 21 23"/></g></symbol>
+<symbol id="switch" viewBox="0 0 36 36"><g stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="28" height="20" rx="4"/><path d="M 10 15 H 13 M 16 15 H 19 M 22 15 H 25 M 10 21 H 13 M 16 21 H 19 M 22 21 H 25"/></g></symbol>
+<symbol id="server" viewBox="0 0 36 36"><g stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"><rect x="9" y="4" width="18" height="28" rx="3"/><path d="M 9 13 H 27 M 9 22 H 27 M 14 9 H 16 M 14 17 H 16 M 14 27 H 16"/></g></symbol>
+<symbol id="pc" viewBox="0 0 36 36"><g stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"><rect x="4" y="6" width="28" height="18" rx="3"/><path d="M 18 24 V 30 M 12 30 H 24"/></g></symbol>
+</defs>
+<rect x="0" y="0" width="1600" height="1160" rx="0" fill="#F7F9FC" stroke="none"/>
+<text x="64" y="52" class="eyebrow" text-anchor="start">ATLAS SERVICES</text>
+<text x="64" y="106" class="headline" text-anchor="start">Enterprise Campus Network</text>
+<text x="66" y="140" class="subtitle" text-anchor="start">Logical topology in Cisco Packet Tracer</text>
+<rect x="32" y="174" width="1536" height="145" rx="20" fill="#EDF3F9" stroke="#D7E2ED"/>
+<text x="60" y="211" class="layer" text-anchor="start">EDGE</text>
+<text x="60" y="237" class="detail" text-anchor="start">Simulated Internet</text>
+<path d="M 701 254 H 886" fill="none" stroke="#3073A8" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M 1097 254 H 1281" fill="none" stroke="#3073A8" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" />
+<text x="793" y="237" class="linklabel" text-anchor="middle">198.51.100.0/30</text>
+<text x="1189" y="237" class="linklabel" text-anchor="middle">203.0.113.0/24</text>
+<rect x="461" y="218" width="240" height="72" rx="14" fill="#FFFFFF" stroke="#C8D6E4"/>
+<rect x="475" y="233" width="42" height="42" rx="10" fill="#E7EFF6" stroke="none"/>
+<use href="#router" xlink:href="#router" x="478" y="236" width="36" height="36" style="color:#234763"/>
+<text x="529" y="249" class="device" text-anchor="start">EDGE-R1</text>
+<text x="529" y="272" class="detail" text-anchor="start">Cisco 2911 · PAT</text>
+<rect x="886" y="218" width="211" height="72" rx="14" fill="#FFFFFF" stroke="#C8D6E4"/>
+<rect x="900" y="233" width="42" height="42" rx="10" fill="#E7EFF6" stroke="none"/>
+<use href="#router" xlink:href="#router" x="903" y="236" width="36" height="36" style="color:#234763"/>
+<text x="954" y="249" class="device" text-anchor="start">ISP-R1</text>
+<text x="954" y="272" class="detail" text-anchor="start">ISP router</text>
+<rect x="1281" y="218" width="255" height="72" rx="14" fill="#FFFFFF" stroke="#C8D6E4"/>
+<rect x="1295" y="233" width="42" height="42" rx="10" fill="#E7EFF6" stroke="none"/>
+<use href="#server" xlink:href="#server" x="1298" y="236" width="36" height="36" style="color:#234763"/>
+<text x="1349" y="249" class="device" text-anchor="start">WEB-EXT</text>
+<text x="1349" y="272" class="detail" text-anchor="start">HTTP · 203.0.113.10</text>
+<rect x="32" y="383" width="1536" height="154" rx="20" fill="#EDF3F9" stroke="#D7E2ED"/>
+<text x="60" y="414" class="layer" text-anchor="start">DISTRIBUTION</text>
+<text x="408" y="358" class="layer" text-anchor="middle">OSPF · area 0</text>
+<path d="M 581 290 V 433" fill="none" stroke="#3073A8" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M 655 290 V 351 H 1056 V 433" fill="none" stroke="#3073A8" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 7"/>
+<rect x="505" y="337" width="152" height="27" rx="13" fill="#F7F9FC" stroke="none"/>
+<text x="581" y="356" class="linklabel" text-anchor="middle">10.255.0.0/30</text>
+<rect x="782" y="337" width="152" height="27" rx="13" fill="#F7F9FC" stroke="none"/>
+<text x="858" y="356" class="linklabel" text-anchor="middle">10.255.0.4/30</text>
+<path d="M 386 469 H 461" fill="none" stroke="#2B659D" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" />
+<text x="423" y="451" class="linklabel" text-anchor="middle">VLAN 40</text>
+<path d="M 701 464 H 936" fill="none" stroke="#A25927" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M 701 475 H 936" fill="none" stroke="#A25927" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<text x="818" y="451" class="legend" text-anchor="middle">Po2 · 2 LACP links</text>
+<rect x="150" y="433" width="236" height="72" rx="14" fill="#FFFFFF" stroke="#C8D6E4"/>
+<rect x="164" y="448" width="42" height="42" rx="10" fill="#E6F0FB" stroke="none"/>
+<use href="#server" xlink:href="#server" x="167" y="451" width="36" height="36" style="color:#2B659D"/>
+<text x="218" y="464" class="device" text-anchor="start">SRV-INFRA</text>
+<text x="218" y="487" class="detail" text-anchor="start">192.168.40.10</text>
+<rect x="461" y="433" width="240" height="72" rx="14" fill="#FFFFFF" stroke="#C8D6E4"/>
+<rect x="475" y="448" width="42" height="42" rx="10" fill="#E7EFF6" stroke="none"/>
+<use href="#switch" xlink:href="#switch" x="478" y="451" width="36" height="36" style="color:#234763"/>
+<text x="529" y="464" class="device" text-anchor="start">DSW1</text>
+<text x="529" y="487" class="detail" text-anchor="start">3560 · active / root</text>
+<rect x="936" y="433" width="240" height="72" rx="14" fill="#FFFFFF" stroke="#C8D6E4"/>
+<rect x="950" y="448" width="42" height="42" rx="10" fill="#E7EFF6" stroke="none"/>
+<use href="#switch" xlink:href="#switch" x="953" y="451" width="36" height="36" style="color:#234763"/>
+<text x="1004" y="464" class="device" text-anchor="start">DSW2</text>
+<text x="1004" y="487" class="detail" text-anchor="start">3560 · standby</text>
+<text x="1217" y="454" class="legend" text-anchor="start">HSRP · Rapid PVST+</text>
+<text x="1217" y="481" class="detail" text-anchor="start">Virtual gateways end in .1</text>
+<rect x="64" y="657" width="484" height="250" rx="22" fill="#E9F7F3" stroke="#B5DBD1"/>
+<rect x="558" y="657" width="484" height="250" rx="22" fill="#F0EDFA" stroke="#D6CDED"/>
+<rect x="1052" y="657" width="484" height="250" rx="22" fill="#FCF1E6" stroke="#EDCFB6"/>
+<path d="M 996 505 L 349 626" fill="none" stroke="#7789A6" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<path d="M 1056 505 L 843 626" fill="none" stroke="#7789A6" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<path d="M 1116 505 L 1337 626" fill="none" stroke="#7789A6" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<path d="M 523 505 L 263 626" fill="none" stroke="#F7F9FC" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M 581 505 L 757 626" fill="none" stroke="#F7F9FC" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M 641 505 L 1251 626" fill="none" stroke="#F7F9FC" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M 523 505 L 263 626" fill="none" stroke="#425B78" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M 581 505 L 757 626" fill="none" stroke="#425B78" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M 641 505 L 1251 626" fill="none" stroke="#425B78" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" />
+<text x="60" y="574" class="layer" text-anchor="start">ACCESS</text>
+<text x="60" y="599" class="detail" text-anchor="start">802.1Q trunks</text>
+<rect x="161" y="626" width="290" height="72" rx="14" fill="#FFFFFF" stroke="#C8D6E4"/>
+<rect x="175" y="641" width="42" height="42" rx="10" fill="#E9F7F3" stroke="none"/>
+<use href="#switch" xlink:href="#switch" x="178" y="644" width="36" height="36" style="color:#067868"/>
+<text x="229" y="657" class="device" text-anchor="start">ASW-IT</text>
+<text x="229" y="680" class="detail" text-anchor="start">Cisco 2960</text>
+<circle cx="263" cy="626" r="4.4" fill="#425B78"/>
+<circle cx="349" cy="626" r="4.4" fill="#7789A6"/>
+<text x="86" y="746" class="zone" text-anchor="start" fill="#067868">IT</text>
+<text x="86" y="770" class="minor" text-anchor="start">VLAN 10 · 192.168.10.0/24</text>
+<path d="M 296 698 V 786 H 192 V 817 M 316 698 V 786 H 420 V 817" fill="none" stroke="#067868" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="168" y="797" width="48" height="16" rx="7" fill="#E9F7F3"/>
+<text x="192" y="809" class="port" text-anchor="middle">Fa0/1</text>
+<rect x="396" y="797" width="48" height="16" rx="7" fill="#E9F7F3"/>
+<text x="420" y="809" class="port" text-anchor="middle">Fa0/2</text>
+<rect x="88" y="817" width="208" height="63" rx="12" fill="#FFFFFF" stroke="#B5DBD1"/>
+<rect x="316" y="817" width="208" height="63" rx="12" fill="#FFFFFF" stroke="#B5DBD1"/>
+<use href="#pc" xlink:href="#pc" x="103" y="830" width="36" height="36" style="color:#067868"/>
+<use href="#pc" xlink:href="#pc" x="331" y="830" width="36" height="36" style="color:#067868"/>
+<text x="144" y="845" class="pc" text-anchor="start">IT-1</text>
+<text x="372" y="845" class="pc" text-anchor="start">IT-2</text>
+<text x="144" y="865" class="minor" text-anchor="start">Static IP · .11</text>
+<text x="372" y="865" class="minor" text-anchor="start">DHCP</text>
+<rect x="655" y="626" width="290" height="72" rx="14" fill="#FFFFFF" stroke="#C8D6E4"/>
+<rect x="669" y="641" width="42" height="42" rx="10" fill="#F0EDFA" stroke="none"/>
+<use href="#switch" xlink:href="#switch" x="672" y="644" width="36" height="36" style="color:#6657A8"/>
+<text x="723" y="657" class="device" text-anchor="start">ASW-ACCOUNTING</text>
+<text x="723" y="680" class="detail" text-anchor="start">Cisco 2960</text>
+<circle cx="757" cy="626" r="4.4" fill="#425B78"/>
+<circle cx="843" cy="626" r="4.4" fill="#7789A6"/>
+<text x="580" y="746" class="zone" text-anchor="start" fill="#6657A8">Accounting</text>
+<text x="580" y="770" class="minor" text-anchor="start">VLAN 20 · 192.168.20.0/24</text>
+<path d="M 790 698 V 786 H 686 V 817 M 810 698 V 786 H 914 V 817" fill="none" stroke="#6657A8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="662" y="797" width="48" height="16" rx="7" fill="#F0EDFA"/>
+<text x="686" y="809" class="port" text-anchor="middle">Fa0/1</text>
+<rect x="890" y="797" width="48" height="16" rx="7" fill="#F0EDFA"/>
+<text x="914" y="809" class="port" text-anchor="middle">Fa0/2</text>
+<rect x="582" y="817" width="208" height="63" rx="12" fill="#FFFFFF" stroke="#D6CDED"/>
+<rect x="810" y="817" width="208" height="63" rx="12" fill="#FFFFFF" stroke="#D6CDED"/>
+<use href="#pc" xlink:href="#pc" x="597" y="830" width="36" height="36" style="color:#6657A8"/>
+<use href="#pc" xlink:href="#pc" x="825" y="830" width="36" height="36" style="color:#6657A8"/>
+<text x="638" y="845" class="pc" text-anchor="start">ACCOUNTING-1</text>
+<text x="866" y="845" class="pc" text-anchor="start">ACCOUNTING-2</text>
+<text x="638" y="865" class="minor" text-anchor="start">DHCP</text>
+<text x="866" y="865" class="minor" text-anchor="start">DHCP</text>
+<rect x="1149" y="626" width="290" height="72" rx="14" fill="#FFFFFF" stroke="#C8D6E4"/>
+<rect x="1163" y="641" width="42" height="42" rx="10" fill="#FCF1E6" stroke="none"/>
+<use href="#switch" xlink:href="#switch" x="1166" y="644" width="36" height="36" style="color:#A44F14"/>
+<text x="1217" y="657" class="device" text-anchor="start">ASW-SALES</text>
+<text x="1217" y="680" class="detail" text-anchor="start">Cisco 2960</text>
+<circle cx="1251" cy="626" r="4.4" fill="#425B78"/>
+<circle cx="1337" cy="626" r="4.4" fill="#7789A6"/>
+<text x="1074" y="746" class="zone" text-anchor="start" fill="#A44F14">Sales</text>
+<text x="1074" y="770" class="minor" text-anchor="start">VLAN 30 · 192.168.30.0/24</text>
+<path d="M 1284 698 V 786 H 1180 V 817 M 1304 698 V 786 H 1408 V 817" fill="none" stroke="#A44F14" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="1156" y="797" width="48" height="16" rx="7" fill="#FCF1E6"/>
+<text x="1180" y="809" class="port" text-anchor="middle">Fa0/1</text>
+<rect x="1384" y="797" width="48" height="16" rx="7" fill="#FCF1E6"/>
+<text x="1408" y="809" class="port" text-anchor="middle">Fa0/2</text>
+<rect x="1076" y="817" width="208" height="63" rx="12" fill="#FFFFFF" stroke="#EDCFB6"/>
+<rect x="1304" y="817" width="208" height="63" rx="12" fill="#FFFFFF" stroke="#EDCFB6"/>
+<use href="#pc" xlink:href="#pc" x="1091" y="830" width="36" height="36" style="color:#A44F14"/>
+<use href="#pc" xlink:href="#pc" x="1319" y="830" width="36" height="36" style="color:#A44F14"/>
+<text x="1132" y="845" class="pc" text-anchor="start">SALES-1</text>
+<text x="1360" y="845" class="pc" text-anchor="start">SALES-2</text>
+<text x="1132" y="865" class="minor" text-anchor="start">DHCP</text>
+<text x="1360" y="865" class="minor" text-anchor="start">DHCP</text>
+<rect x="64" y="923" width="962" height="103" rx="18" fill="#FFFFFF" stroke="#D7E2ED"/>
+<text x="86" y="963" class="layer">GUEST ACCESS POLICY</text>
+<text x="86" y="991" class="detail">Allow DHCP and direct access to WEB-EXT. Block guest access to internal networks.</text>
+<rect x="1052" y="923" width="484" height="103" rx="18" fill="#FCEEF3" stroke="#E7BFCE"/>
+<text x="1074" y="966" class="zone" fill="#99385C">Guests</text>
+<text x="1074" y="992" class="minor">VLAN 50 · 192.168.50.0/24</text>
+<path d="M 1439 676 H 1524 V 975 H 1512" fill="none" stroke="#99385C" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1481" y="666" class="port" text-anchor="middle">Fa0/3</text>
+<rect x="1304" y="945" width="208" height="60" rx="12" fill="#FFFFFF" stroke="#E7BFCE"/>
+<use href="#pc" xlink:href="#pc" x="1319" y="957" width="36" height="36" style="color:#99385C"/>
+<text x="1360" y="972" class="pc">GUEST-1</text>
+<text x="1360" y="991" class="minor">DHCP</text>
+<rect x="32" y="1048" width="1536" height="83" rx="16" fill="#EDF3F9" stroke="#D7E2ED"/>
+<path d="M 61 1076 H 102" fill="none" stroke="#425B78" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" />
+<text x="114" y="1082" class="legend" text-anchor="start">Primary trunk</text>
+<path d="M 318 1076 H 359" fill="none" stroke="#7789A6" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<text x="371" y="1082" class="legend" text-anchor="start">Backup trunk</text>
+<path d="M 591 1076 H 632" fill="none" stroke="#3073A8" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" />
+<text x="644" y="1082" class="legend" text-anchor="start">Routed link</text>
+<text x="887" y="1082" class="legend" text-anchor="start">VLAN 99 · management · 192.168.99.0/24</text>
+<text x="61" y="1109" class="detail" text-anchor="start">Dashed links connect to the standby distribution switch. VLAN 999 is the native VLAN on all trunks.</text>
+</svg>

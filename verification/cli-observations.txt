@@ -1,0 +1,29 @@
+Selected lines transcribed from the original Packet Tracer screenshots.
+
+DSW1#show etherchannel summary
+Group  Port-channel  Protocol  Ports
+1      Po1(SD)       LACP      Fa0/23(D) Fa0/24(D)
+2      Po2(SU)       LACP      Fa0/21(P) Fa0/22(P)
+Source: ../screenshots/dsw1-po2-lacp-bundle.png
+
+DSW1#show standby brief
+Interface  Grp  Pri P State   Active  Standby        Virtual IP
+Vl10       10   110 P Active  local   192.168.10.3   192.168.10.1
+Vl20       20   110 P Active  local   192.168.20.3   192.168.20.1
+Vl30       30   110 P Active  local   192.168.30.3   192.168.30.1
+Vl40       40   110 P Active  local   192.168.40.3   192.168.40.1
+Vl50       50   110 P Active  local   192.168.50.3   192.168.50.1
+Vl99       99   110 P Active  local   192.168.99.3   192.168.99.1
+Source: ../screenshots/dsw1-hsrp-active-after-recovery.png
+
+EDGE-R1#show ip route ospf
+O  192.168.10.0 [110/2] via 10.255.0.6, 00:00:41, GigabitEthernet0/2
+O  192.168.20.0 [110/2] via 10.255.0.6, 00:00:41, GigabitEthernet0/2
+O  192.168.30.0 [110/2] via 10.255.0.6, 00:00:41, GigabitEthernet0/2
+O  192.168.50.0 [110/2] via 10.255.0.6, 00:00:41, GigabitEthernet0/2
+Source: ../screenshots/edge-r1-ospf-dsw1-isolated.png
+
+EDGE-R1#show ip nat translations
+Pro   Inside global  Inside local  Outside local  Outside global
+icmp  198.51.100.1:40 192.168.10.11:40 203.0.113.10:40 203.0.113.10:40
+Source: ../screenshots/edge-r1-pat-it-1-web-ext.png
